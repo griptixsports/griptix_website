@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  python-lint:
+    name: Python — Ruff & Mypy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install linting tools
+        run: pip install ruff mypy pydantic pydantic-settings
+
+      - name: Ruff check
+        run: ruff check apps/api
+
+      - name: Mypy typecheck
+        run: mypy apps/api --ignore-missing-imports
+
+  python-test:
+    name: Python — Pytest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install pytest pytest-asyncio
+          if [ -s apps/api/requirements.txt ]; then
+            pip install -r apps/api/requirements.txt
+          fi
+
+      - name: Run tests
+        run: pytest apps/api/tests --tb=short -q
+
+  web-lint:
+    name: Web — ESLint & TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: ESLint
+        run: pnpm lint:web
+
+      - name: TypeScript
+        run: pnpm typecheck:web
+
+  web-test:
+    name: Web — Jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Jest
+        run: pnpm --filter web exec jest --passWithNoTests --ci

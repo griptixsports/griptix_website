@@ -19,7 +19,7 @@ To support immediate deployment and zero cloud spend during developer validation
 | Component | Standard / Paid | Free Tier Replacement |
 | --- | --- | --- |
 | **Frontend Hosting** | Vercel Pro | **Vercel Hobby** |
-| **Backend Hosting** | AWS ECS Fargate | **Railway** (primary) / Render (fallback) |
+| **Backend Hosting** | AWS ECS Fargate | **Render** (free tier, via `render.yaml`) |
 | **Database** | AWS RDS PostgreSQL | **Neon Serverless PostgreSQL** (with `pgvector`) |
 | **Object Storage** | AWS S3 | **Cloudflare R2** (Zero egress fees, S3-Compatible API) |
 | **CDN** | AWS CloudFront | **Cloudflare CDN** |
@@ -47,7 +47,7 @@ griptix-monorepo/
 ├── packages/
 │   ├── ui/                     # Design tokens & stateless component library
 │   └── types/                  # Shared TypeScript/Pydantic schemas
-├── infra/                      # Railway/Render configuration & Cloudflare CLI script runbooks
+├── infra/                      # Render configuration & Cloudflare CLI script runbooks
 ├── docs/
 │   └── adr/                    # Architecture Decision Records
 │

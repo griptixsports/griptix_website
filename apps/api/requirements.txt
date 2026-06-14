@@ -1,0 +1,44 @@
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+
+# Configuration
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# Database
+sqlmodel==0.0.22
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+aiosqlite==0.20.0
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Storage (Cloudflare R2 via S3-compatible API)
+# TODO (MAINTENANCE.md): Only needed once R2_ACCESS_KEY_ID is a real credential.
+boto3==1.35.81
+
+# Payments
+# TODO (MAINTENANCE.md): Only used once STRIPE_SECRET_KEY is a real production key.
+stripe==11.3.0
+
+# Error tracking
+# TODO (MAINTENANCE.md): Only active once SENTRY_DSN_BACKEND is a real DSN.
+sentry-sdk[fastapi]==2.19.0
+
+# Structured logging — Better Stack / Logtail
+# TODO (MAINTENANCE.md): Only ships logs once LOGTAIL_SOURCE_TOKEN is a real token.
+logtail-python==0.3.3
+
+# HTTP client
+httpx==0.28.0
+
+# Email (Brevo)
+sib-api-v3-sdk==7.6.0
+
+# LLM / AI
+groq==0.13.1
+langfuse==2.57.5

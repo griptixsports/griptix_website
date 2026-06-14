@@ -1,6 +1,8 @@
+import dynamic from "next/dynamic";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import AgentationClient from "../components/AgentationClient";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://griptix.in"),
@@ -60,6 +62,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        {process.env.NODE_ENV === "development" && <AgentationClient />}
         <Script
           type="module"
           src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"

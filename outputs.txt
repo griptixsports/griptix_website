@@ -1,0 +1,40 @@
+
+=== 2026-06-17: Stage 1 Foundation — Completion Pass ===
+
+PYTHON FILES FILLED (Stage 1 foundation context):
+  core/database.py            — async SQLAlchemy engine, session factory, get_db dependency
+  app/models/base.py          — TimestampedBase (id UUID, created_at, updated_at)
+  app/models/product.py       — Product ORM (title, sku, price, category, status)
+  app/models/user.py          — User ORM (email, hashed_password, role, google_id)
+  app/models/order.py         — Order + OrderItem ORM (status enum, Stripe/Razorpay IDs)
+  app/models/anatomical_profile.py — AnatomicalProfile ORM (hand measurements, discipline)
+  app/models/audit_log.py     — AuditLog ORM (action, resource_type, ip, user_agent)
+  app/models/__init__.py      — re-exports all 7 models
+  app/schemas/common.py       — PaginatedResponse[T], MessageResponse, ErrorDetail
+  app/schemas/product.py      — ProductRead, ProductListItem
+  app/schemas/user.py         — UserCreate (with password validation), UserRead, UserUpdate
+  app/schemas/order.py        — OrderCreate, OrderItemCreate, OrderRead, OrderItemRead
+  app/schemas/token.py        — Token, TokenPayload, LoginRequest, RefreshRequest
+  app/schemas/__init__.py     — re-exports all 15 schemas
+  app/routes/__init__.py      — api_router (APIRouter stub, ready for sub-router registration)
+  app/services/__init__.py    — comment marker
+  app/models/__init__.py      — already done above
+  tests/conftest.py           — pytest fixtures: setup_db (in-memory SQLite), db_session, client (AsyncClient)
+  app/main.py                 — wired api_router with prefix settings.api_v1_prefix
+
+TYPESCRIPT TYPE FILES FILLED (packages/types):
+  product.ts    — Product, ProductListItem, ProductCustomization, ProductCategory, ProductStatus
+  user.ts       — User, UserCreate, UserUpdate, AnatomicalProfile, UserRole
+  order.ts      — Order, OrderCreate, OrderItem, OrderItemCreate, OrderStatus, OrderCurrency
+  database.ts   — DBRecord, PaginatedResponse<T>
+  api.ts        — Token, LoginRequest, RefreshRequest, MessageResponse, ErrorDetail, ApiError
+  index.ts      — barrel re-export of all types
+
+OTHER FIXES:
+  packages/ui/package.json    — added scripts: lint, typecheck, storybook, build-storybook
+  infra/README.md             — fixed Railway→Render references (2 occurrences)
+  infra/pre-launch-checklist.md — new: deploy checklist for Render/Vercel/DNS/GitHub secrets
+  README.md                   — fixed Railway→Render in tech stack table and infra description
+  env.example                 — replaced Railway section with Render credentials (Section 5)
+  package-lock.json           — DELETED (stray npm lock file; project uses pnpm exclusively)
+
