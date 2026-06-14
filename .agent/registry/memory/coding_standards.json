@@ -1,0 +1,6 @@
+{
+  "id": "coding_standards",
+  "name": "Coding Standards",
+  "file_path": ".agent/memory/coding_standards.json",
+  "description": "Rules for code style, patterns, testing requirements, and directory boundaries."
+}

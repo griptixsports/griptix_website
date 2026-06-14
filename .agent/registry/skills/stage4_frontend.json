@@ -1,0 +1,18 @@
+{
+  "id": "stage4_frontend",
+  "name": "Stage 4 Frontend Implementation",
+  "agent": "FRONTEND",
+  "file_path": ".agent/skills/stage4_frontend.md",
+  "inputs": [
+    ".agent/memory/tech_stack.json",
+    ".agent/memory/branding.json",
+    ".agent/memory/product.json",
+    "packages/ui/tokens.ts",
+    "packages/ui/Button.tsx"
+  ],
+  "outputs": [
+    "apps/web/src/app/layout.tsx",
+    "apps/web/src/app/page.tsx",
+    "apps/web/src/app/globals.css"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "frozen",
+  "frozen_directories": [
+    ".agent/",
+    ".agent/runtime/",
+    ".agent/registry/",
+    ".agent/memory/",
+    ".agent/evaluations/",
+    ".agent/workflows/"
+  ],
+  "directive": "Do not build more framework abstractions. Focus entirely on building the actual Griptix product features."
+}

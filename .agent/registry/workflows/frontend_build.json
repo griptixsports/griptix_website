@@ -1,0 +1,6 @@
+{
+  "id": "frontend_build",
+  "name": "Frontend Build Workflow",
+  "file_path": ".agent/workflows/frontend_build.md",
+  "description": "Sequence of operations for linting, type-checking, compiling, and testing the web app."
+}

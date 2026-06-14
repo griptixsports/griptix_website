@@ -1,0 +1,65 @@
+[
+  {
+    "id": "DEC-001",
+    "title": "Monorepo Scaffolding",
+    "context": "Establish clean, version-aligned development across subprojects.",
+    "decision": "Use pnpm workspaces for web and ui packages, pyproject.toml configuration for python.",
+    "consequence": "Atomic commits and clean dependencies. Storybook, backend, types, and Next.js can be launched cleanly in a unified repository."
+  },
+  {
+    "id": "DEC-002",
+    "title": "Free-Tier Cloud Migration",
+    "context": "Paid cloud configurations (AWS ECS/RDS/S3, Vercel Pro, SendGrid, Twilio, Jina AI, xAI Grok, Hotjar) generate immediate overhead before validation.",
+    "decision": "Replace all paid services with perpetual free tier equivalents.",
+    "consequence": "$0 infrastructure cost during Cycles 0, 1, and early 2. Mappings are database connection string and endpoint adjustments only, preserving core business logic."
+  },
+  {
+    "id": "DEC-003",
+    "title": "Database Hosting Replacement",
+    "context": "AWS RDS (db.t3.medium) replaced to cut database hosting fees.",
+    "decision": "Use Neon Serverless PostgreSQL.",
+    "consequence": "0.5 GB storage limits are sufficient for launch. Branches can be generated for PR validation. Daily automatic backups replace PITR, and pgvector is supported."
+  },
+  {
+    "id": "DEC-004",
+    "title": "Backend Deployment Replacement",
+    "context": "AWS ECS Fargate replaced to avoid container clustering costs. Fly.io was initially considered but Railway offers simpler GitHub-native CI/CD and a more generous free credit allowance ($5/month free) with no cold-boot penalty.",
+    "decision": "Use Railway (primary) for FastAPI container hosting. Render is the documented fallback if Railway credit is exhausted.",
+    "consequence": "Railway deploys directly from GitHub on push with zero CLI setup. Render's free tier sleeps containers after 15 minutes of inactivity (not suitable for production, but adequate for staging). Both support Python Dockerfile deployments via standard Dockerfile at apps/api/Dockerfile. Environment variables are set via Railway/Render dashboard and kept in sync with Doppler during development. Custom domain api.griptix.in is mapped via Railway's custom domain settings."
+  },
+  {
+    "id": "DEC-005",
+    "title": "Storage Replacement",
+    "context": "AWS S3 and CloudFront replaced to eliminate object storage and egress bandwidth fees.",
+    "decision": "Use Cloudflare R2 and Cloudflare Free CDN.",
+    "consequence": "S3-compatible API client code in boto3/AWS SDK works out-of-the-box by only changing credentials and endpoint_url parameters. Egress is free."
+  },
+  {
+    "id": "DEC-006",
+    "title": "Email Replacement",
+    "context": "SendGrid paid API tiers replaced.",
+    "decision": "Use Brevo (Sendinblue) Transactional API.",
+    "consequence": "Provides 300 free emails/day. sib-api-v3-sdk Python package handles emails. Template IDs become integer values instead of SendGrid's d-XXXXXX hash format."
+  },
+  {
+    "id": "DEC-007",
+    "title": "LLM Inference Replacement",
+    "context": "xAI Grok paid API replaced.",
+    "decision": "Use Groq Cloud API.",
+    "consequence": "Groq provides free OpenAI-compatible endpoints for Llama 3.3 70B. Vision tasks are routed to HF Inference API or local vision libraries."
+  },
+  {
+    "id": "DEC-008",
+    "title": "Search Embeddings Replacement",
+    "context": "Jina AI paid embeddings API replaced.",
+    "decision": "Use Hugging Face Inference API.",
+    "consequence": "BAAI/bge-small-en-v1.5 model generates 384-dimensional embeddings (compared to Jina's 1024). Alembic products table migration must match the 384 size."
+  },
+  {
+    "id": "DEC-009",
+    "title": "AI Observability Replacement",
+    "context": "Opik paid SaaS replaced.",
+    "decision": "Use Langfuse Cloud.",
+    "consequence": "Langfuse provides a permanent free cloud tier for hobbyists with unlimited traces. Opik tracing decorators are replaced with Langfuse's @observe() wrapper."
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "stage2_infrastructure",
+  "name": "Stage 2 Infrastructure Setup",
+  "agent": "INFRA",
+  "file_path": ".agent/skills/stage2_infrastructure.md",
+  "inputs": [
+    ".agent/memory/tech_stack.json",
+    ".agent/memory/dependencies.json",
+    "infra/railway/railway.json"
+  ],
+  "outputs": [
+    "infra/scripts/setup.sh",
+    "infra/README.md"
+  ]
+}

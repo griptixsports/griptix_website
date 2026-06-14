@@ -1,0 +1,25 @@
+{
+  "id": "stage3_database",
+  "name": "Stage 3 Database Schema Setup",
+  "agent": "SCHEMA",
+  "file_path": ".agent/skills/stage3_database.md",
+  "inputs": [
+    ".agent/memory/tech_stack.json",
+    ".agent/memory/dependencies.json"
+  ],
+  "outputs": [
+    "apps/api/app/models/base.py",
+    "apps/api/app/models/user.py",
+    "apps/api/app/models/product.py",
+    "apps/api/app/models/order.py",
+    "apps/api/app/models/anatomical_profile.py",
+    "apps/api/app/models/audit_log.py",
+    "apps/api/app/schemas/user.py",
+    "apps/api/app/schemas/product.py",
+    "apps/api/app/schemas/order.py",
+    "apps/api/app/schemas/token.py",
+    "apps/api/app/schemas/common.py",
+    "alembic/env.py",
+    "alembic/alembic.ini"
+  ]
+}

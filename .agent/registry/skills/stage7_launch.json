@@ -1,0 +1,14 @@
+{
+  "id": "stage7_launch",
+  "name": "Stage 7 Launch Phase",
+  "agent": "SEO",
+  "file_path": ".agent/skills/stage7_launch.md",
+  "inputs": [
+    ".agent/memory/branding.json",
+    ".agent/memory/product.json"
+  ],
+  "outputs": [
+    "apps/web/src/app/sitemap.ts",
+    "apps/web/src/app/robots.ts"
+  ]
+}

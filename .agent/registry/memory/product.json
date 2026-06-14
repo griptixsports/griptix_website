@@ -1,0 +1,6 @@
+{
+  "id": "product",
+  "name": "Product Requirements Document",
+  "file_path": ".agent/memory/product.json",
+  "description": "Product catalog definition, sizing variables, user stories, and feature map."
+}

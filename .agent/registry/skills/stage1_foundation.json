@@ -1,0 +1,16 @@
+{
+  "id": "stage1_foundation",
+  "name": "Stage 1 Foundation Setup",
+  "agent": "INFRA",
+  "file_path": ".agent/skills/stage1_foundation.md",
+  "inputs": [
+    ".agent/memory/tech_stack.json",
+    ".agent/memory/dependencies.json"
+  ],
+  "outputs": [
+    "docker-compose.yml",
+    "docker-compose.override.yml",
+    ".github/workflows/ci.yml",
+    "infra/railway/railway.json"
+  ]
+}

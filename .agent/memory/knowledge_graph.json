@@ -1,0 +1,116 @@
+{
+  "_readme": "Component dependency graph. Each key is a UI component. 'depends_on' lists components it requires. 'used_by' lists pages/features that consume it. Agents must ensure dependencies exist before building a component.",
+  "components": {
+    "ThemeProvider": {
+      "depends_on": [],
+      "used_by": ["RootLayout"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "ButtonPrimary": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["ProductCard", "CheckoutForm", "SizingWizard", "HeroSection"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "ButtonSecondary": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["ProductCard", "FilterPanel"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "InputField": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["CheckoutForm", "LoginForm", "SizingWizard"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "Card": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["ProductCard", "OrderCard", "PartnerCard"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "Badge": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["ProductCard", "OrderStatusBadge"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "ProductCard": {
+      "depends_on": ["Card", "ButtonPrimary", "Badge", "ThemeProvider"],
+      "used_by": ["CollectionsPage", "SearchResults", "RelatedProducts"],
+      "package": "apps/web",
+      "status": "not_built"
+    },
+    "SizingWizard": {
+      "depends_on": ["InputField", "ButtonPrimary", "ButtonSecondary", "ProgressBar"],
+      "used_by": ["SizingPage"],
+      "package": "apps/web",
+      "status": "not_built"
+    },
+    "CheckoutForm": {
+      "depends_on": ["InputField", "ButtonPrimary", "OrderSummary"],
+      "used_by": ["CheckoutPage"],
+      "package": "apps/web",
+      "status": "not_built"
+    },
+    "OrderSummary": {
+      "depends_on": ["Card", "Badge"],
+      "used_by": ["CheckoutForm", "OrderConfirmationPage"],
+      "package": "apps/web",
+      "status": "not_built"
+    },
+    "ProgressBar": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["SizingWizard"],
+      "package": "packages/ui",
+      "status": "stub"
+    },
+    "HeroSection": {
+      "depends_on": ["ButtonPrimary", "ButtonSecondary"],
+      "used_by": ["HomePage"],
+      "package": "apps/web",
+      "status": "not_built"
+    },
+    "Navigation": {
+      "depends_on": ["ThemeProvider", "ButtonPrimary"],
+      "used_by": ["RootLayout"],
+      "package": "apps/web",
+      "status": "not_built"
+    },
+    "Footer": {
+      "depends_on": ["ThemeProvider"],
+      "used_by": ["RootLayout"],
+      "package": "apps/web",
+      "status": "not_built"
+    }
+  },
+  "pages": {
+    "HomePage": {
+      "route": "/",
+      "depends_on": ["HeroSection", "ProductCard", "Navigation", "Footer"],
+      "status": "not_built"
+    },
+    "CollectionsPage": {
+      "route": "/collections/[discipline]",
+      "depends_on": ["ProductCard", "FilterPanel", "Navigation", "Footer"],
+      "status": "not_built"
+    },
+    "ProductDetailPage": {
+      "route": "/products/[slug]",
+      "depends_on": ["ProductCard", "ButtonPrimary", "SizingWizard"],
+      "status": "not_built"
+    },
+    "SizingPage": {
+      "route": "/size-guide",
+      "depends_on": ["SizingWizard"],
+      "status": "not_built"
+    },
+    "CheckoutPage": {
+      "route": "/checkout",
+      "depends_on": ["CheckoutForm", "OrderSummary"],
+      "status": "not_built"
+    }
+  }
+}

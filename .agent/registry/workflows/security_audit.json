@@ -1,0 +1,6 @@
+{
+  "id": "security_audit",
+  "name": "Security Audit Workflow",
+  "file_path": ".agent/workflows/security_audit.md",
+  "description": "Workflow sequence to perform SAST scans, audit dependencies, check CSP headers, and verify auth checks."
+}

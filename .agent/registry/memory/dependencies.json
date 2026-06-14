@@ -1,0 +1,6 @@
+{
+  "id": "dependencies",
+  "name": "Dependencies Manifest",
+  "file_path": ".agent/memory/dependencies.json",
+  "description": "Workspace-by-workspace package dependency definitions and exact versions."
+}

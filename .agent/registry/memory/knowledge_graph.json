@@ -1,0 +1,6 @@
+{
+  "id": "knowledge_graph",
+  "name": "Component Knowledge Graph",
+  "file_path": ".agent/memory/knowledge_graph.json",
+  "description": "Component dependency trees and relationships across frontend libraries."
+}

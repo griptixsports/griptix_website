@@ -1,0 +1,92 @@
+{
+  "frontend": {
+    "framework": "Next.js",
+    "version": "14.2.3",
+    "language": "TypeScript",
+    "ts_version": "5.3.3",
+    "runtime": "Node.js 20 LTS",
+    "router": "App Router",
+    "rendering": ["SSR", "SSG", "ISR"],
+    "state_management": "React Server Components + useContext",
+    "styling": "Tailwind CSS 3.4 + CSS Modules",
+    "animation": "Framer Motion 11",
+    "auth": "NextAuth.js 4",
+    "data_fetching": "TanStack Query 5",
+    "forms": "React Hook Form 7 + Zod",
+    "testing": "Jest 29 + React Testing Library 14 + Playwright 1.44"
+  },
+  "backend": {
+    "framework": "FastAPI",
+    "version": "0.111.0",
+    "language": "Python",
+    "python_version": "3.12",
+    "asgi_server": "Uvicorn 0.30",
+    "process_manager": "Gunicorn 22 (production)",
+    "orm": "SQLAlchemy 2.0 (async)",
+    "migrations": "Alembic 1.13",
+    "validation": "Pydantic v2",
+    "auth": "python-jose 3.3 + passlib 1.7 (bcrypt)",
+    "task_queue": "None (Cycle 0) / Celery (Cycle 3)",
+    "ai_framework": "LangGraph 0.1 (Cycle 3)",
+    "http_client": "httpx 0.27",
+    "testing": "Pytest 8 + pytest-asyncio + httpx"
+  },
+  "database": {
+    "engine": "PostgreSQL 16",
+    "host": "Neon Serverless",
+    "driver": "asyncpg 0.29",
+    "extensions": ["pgvector (0.7)", "uuid-ossp"],
+    "vector_dimensions": 384,
+    "connection_pool": "SQLAlchemy async pool, pool_size=5"
+  },
+  "cache": {
+    "engine": "Redis 7",
+    "host": "Upstash Serverless",
+    "driver": "redis-py 5 (async)",
+    "url_format": "rediss://:password@host.upstash.io:6379"
+  },
+  "object_storage": {
+    "provider": "Cloudflare R2",
+    "api": "S3-compatible",
+    "client": "boto3 1.34 (endpoint_url override)",
+    "buckets": {
+      "griptix-uploads": "private — user uploads",
+      "griptix-media": "public — product imagery via CDN"
+    }
+  },
+  "cdn": {
+    "provider": "Cloudflare Free CDN",
+    "custom_domain": "media.griptix.in"
+  },
+  "email": {
+    "provider": "Brevo (Sendinblue)",
+    "sdk": "sib-api-v3-sdk (Python)",
+    "free_limit": "300 emails/day",
+    "template_id_format": "integer"
+  },
+  "payments": {
+    "international": "Stripe 4.x (stripe-python)",
+    "domestic": "Razorpay 1.x (razorpay Python SDK)",
+    "webhook_validation": "HMAC-SHA256 signatures"
+  },
+  "hosting": {
+    "frontend": "Vercel Hobby",
+    "backend": "Railway (primary) / Render (fallback)",
+    "container_registry": "GitHub Container Registry (ghcr.io)"
+  },
+  "secrets": {
+    "development": "Doppler Developer Plan",
+    "production": "Railway Environment Variables"
+  },
+  "observability": {
+    "error_tracking": "Sentry Free (frontend + backend)",
+    "logging": "Better Stack / Logtail",
+    "ai_tracing": "Langfuse Cloud",
+    "analytics": "GA4 + Meta Pixel + Microsoft Clarity"
+  },
+  "ai": {
+    "llm": "Groq Cloud (llama-3.3-70b-versatile)",
+    "embeddings": "Hugging Face Inference API (BAAI/bge-small-en-v1.5)",
+    "vector_dims": 384
+  }
+}

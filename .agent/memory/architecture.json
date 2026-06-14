@@ -1,0 +1,66 @@
+{
+  "monorepo": {
+    "package_manager": "pnpm workspaces",
+    "directories": {
+      "web_app": "/apps/web",
+      "api_app": "/apps/api",
+      "ui_package": "/packages/ui",
+      "types_package": "/packages/types",
+      "infrastructure": "/infra",
+      "architecture_decision_records": "/docs/adr"
+    }
+  },
+  "frontend": {
+    "framework": "Next.js 14",
+    "language": "TypeScript",
+    "styling": "TailwindCSS / Vanilla CSS",
+    "state_management": {
+      "cart": "Zustand (client-side persist)",
+      "auth": "NextAuth.js"
+    },
+    "rendering": {
+      "static_pages": "Incremental Static Regeneration (revalidate: 60)",
+      "dynamic_pages": "Server-Side Rendering (SSR)"
+    }
+  },
+  "backend": {
+    "framework": "FastAPI (Python 3.12+)",
+    "orm": "SQLModel / SQLAlchemy",
+    "migration_tool": "Alembic",
+    "asynchronous_support": "Uvicorn / Gunicorn",
+    "caching": "Upstash Redis Serverless (TTL: 60s for catalog data)",
+    "rate_limiting": "slowapi (Max 10 requests/minute per IP on auth routes)"
+  },
+  "database": {
+    "provider": "Neon Serverless PostgreSQL",
+    "version": 15,
+    "extensions": ["pgvector"]
+  },
+  "object_storage": {
+    "provider": "Cloudflare R2 (S3-Compatible API)",
+    "buckets": {
+      "private_uploads": "griptix-uploads",
+      "public_media": "griptix-media"
+    },
+    "upload_pattern": "Client direct upload via backend pre-signed PUT URLs"
+  },
+  "notifications": {
+    "email": "Brevo Transactional API ( sib-api-v3-sdk )",
+    "sms": "Brevo SMS API ( sib-api-v3-sdk )",
+    "whatsapp": "Meta WhatsApp Business API"
+  },
+  "payments": {
+    "gateways": {
+      "international": "Stripe Elements / PaymentIntent API",
+      "domestic": "Razorpay Order API & verification modal"
+    }
+  },
+  "ai_agent_workflows": {
+    "orchestration": "LangGraph",
+    "inference": {
+      "reasoning": "Groq Cloud API (llama-3.3-70b-versatile)",
+      "embeddings": "Hugging Face Inference API (BAAI/bge-small-en-v1.5)"
+    },
+    "observability": "Langfuse Cloud"
+  }
+}

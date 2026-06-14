@@ -1,0 +1,74 @@
+[
+  {
+    "id": "STAGE1-001",
+    "name": "Docker Compose Configuration",
+    "description": "Create docker-compose.yml and docker-compose.override.yml for web, api, db, and redis services.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-002",
+    "name": "Linter & Prettier Configuration",
+    "description": "Create ESLint and Prettier configuration files at root and within workspaces.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-003",
+    "name": "CI/CD Workflows",
+    "description": "Create GitHub Actions pipelines for linting, testing, and deploying frontend and backend services.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-004",
+    "name": "Railway App Configuration",
+    "description": "Create Railway app config and settings files for service deployments.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-005",
+    "name": "Local Dev Bootstrap Script",
+    "description": "Create setup.sh script to bootstrap docker, databases, and dependencies.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-006",
+    "name": "Next.js Workspace Setup",
+    "description": "Scaffold apps/web with layout, globals.css, and tsconfig.",
+    "agent": "FRONTEND",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-007",
+    "name": "FastAPI App Skeleton Setup",
+    "description": "Create apps/api/main.py, config, database, and requirements.txt.",
+    "agent": "BACKEND",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  },
+  {
+    "id": "STAGE1-008",
+    "name": "Database Schema Scaffolding",
+    "description": "Define database models, schemas, and configure Alembic migration environment.",
+    "agent": "SCHEMA",
+    "skill": "stage1_foundation",
+    "status": "queued",
+    "blocked_by": ["MISSING_REQUIREMENTS"]
+  }
+]

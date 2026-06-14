@@ -1,0 +1,14 @@
+{
+  "id": "stage5_checkout",
+  "name": "Stage 5 Checkout Platform Setup",
+  "agent": "FRONTEND",
+  "file_path": ".agent/skills/stage5_checkout.md",
+  "inputs": [
+    ".agent/memory/tech_stack.json",
+    ".agent/memory/dependencies.json"
+  ],
+  "outputs": [
+    "apps/web/src/app/checkout/page.tsx",
+    "apps/web/src/app/checkout/success/page.tsx"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "stage6_launch_prep",
+  "name": "Stage 6 Launch Preparation",
+  "agent": "QA",
+  "file_path": ".agent/skills/stage6_launch_prep.md",
+  "inputs": [
+    ".agent/memory/coding_standards.json"
+  ],
+  "outputs": [
+    "apps/api/tests/conftest.py"
+  ]
+}

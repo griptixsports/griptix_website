@@ -1,0 +1,34 @@
+{
+  "skills": {
+    "stage1_foundation": ".agent/registry/skills/stage1_foundation.json",
+    "stage2_infrastructure": ".agent/registry/skills/stage2_infrastructure.json",
+    "stage3_database": ".agent/registry/skills/stage3_database.json",
+    "stage4_frontend": ".agent/registry/skills/stage4_frontend.json",
+    "stage5_checkout": ".agent/registry/skills/stage5_checkout.json",
+    "stage6_launch_prep": ".agent/registry/skills/stage6_launch_prep.json",
+    "stage7_launch": ".agent/registry/skills/stage7_launch.json"
+  },
+  "memory": {
+    "tech_stack": ".agent/registry/memory/tech_stack.json",
+    "coding_standards": ".agent/registry/memory/coding_standards.json",
+    "knowledge_graph": ".agent/registry/memory/knowledge_graph.json",
+    "dependencies": ".agent/registry/memory/dependencies.json",
+    "architecture": ".agent/registry/memory/architecture.json",
+    "branding": ".agent/registry/memory/branding.json",
+    "decisions": ".agent/registry/memory/decisions.json",
+    "product": ".agent/registry/memory/product.json",
+    "users": ".agent/registry/memory/users.json"
+  },
+  "workflows": {
+    "frontend_build": ".agent/registry/workflows/frontend_build.json",
+    "backend_build": ".agent/registry/workflows/backend_build.json",
+    "security_audit": ".agent/registry/workflows/security_audit.json"
+  },
+  "evaluations": {
+    "architecture": ".agent/registry/evaluations/architecture.json",
+    "security": ".agent/registry/evaluations/security.json",
+    "performance": ".agent/registry/evaluations/performance.json",
+    "code_quality": ".agent/registry/evaluations/code_quality.json",
+    "readiness": ".agent/registry/evaluations/readiness.json"
+  }
+}

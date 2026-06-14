@@ -1,0 +1,74 @@
+{
+  "brand_feel": {
+    "philosophy": "Technical Luxury",
+    "inspiration": "Porsche Design, high-end cycling brands (Specialized, Cervélo), Formula 1 carbon components",
+    "keywords": ["precise", "uncompromising", "elite", "authoritative", "champion-standard"]
+  },
+  "color_palette": {
+    "backgrounds": {
+      "flagship_dark": "#0A0A0A",
+      "panel_dark": "#1A1A1A",
+      "light_mode_base": "#F5F5F5",
+      "light_mode_panel": "#FFFFFF"
+    },
+    "accents": {
+      "olympic_gold": "#D4AF37",
+      "gold_rgb": "212, 175, 55"
+    },
+    "text": {
+      "dark_theme_primary": "#FFFFFF",
+      "dark_theme_muted": "#8A8A8A",
+      "light_theme_primary": "#111111",
+      "light_theme_muted": "#555555"
+    },
+    "statuses": {
+      "success": "#27AE60",
+      "error": "#C0392B",
+      "warning": "#E67E22",
+      "info": "#2980B9"
+    }
+  },
+  "typography": {
+    "font_family": "Inter, sans-serif",
+    "scale": {
+      "xs": "12px",
+      "sm": "14px",
+      "md": "16px",
+      "lg": "18px",
+      "xl": "20px",
+      "xxl": "24px",
+      "title_h1": "36px",
+      "title_h2": "28px",
+      "title_h3": "24px",
+      "title_h4": "20px"
+    },
+    "weights": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "shadows": {
+    "sm": "0 1px 3px rgba(0, 0, 0, 0.12)",
+    "md": "0 4px 6px rgba(0, 0, 0, 0.08)",
+    "gold_glow": "0 0 12px rgba(212, 175, 55, 0.45)"
+  },
+  "border_radius": {
+    "sm": "4px",
+    "md": "8px",
+    "full": "9999px"
+  },
+  "spacing": {
+    "scale_unit": "4px",
+    "increments": {
+      "space_1": "4px",
+      "space_2": "8px",
+      "space_3": "12px",
+      "space_4": "16px",
+      "space_8": "32px",
+      "space_12": "48px",
+      "space_16": "64px"
+    }
+  }
+}

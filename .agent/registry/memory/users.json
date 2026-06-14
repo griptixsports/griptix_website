@@ -1,0 +1,6 @@
+{
+  "id": "users",
+  "name": "User Personas & RBAC",
+  "file_path": ".agent/memory/users.json",
+  "description": "User personas, target audience definitions, role-based access controls, and auth schemas."
+}

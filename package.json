@@ -1,0 +1,27 @@
+{
+  "name": "griptix-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Griptix — Olympic-Grade custom sporting grip platform",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
+    "dev:all": "docker compose up",
+    "build:web": "pnpm --filter web build",
+    "build:ui": "pnpm --filter ui build",
+    "lint:web": "pnpm --filter web lint",
+    "lint:ui": "pnpm --filter ui lint",
+    "lint:api": "ruff check apps/api",
+    "typecheck:web": "pnpm --filter web typecheck",
+    "typecheck:ui": "pnpm --filter ui typecheck",
+    "typecheck:api": "mypy apps/api",
+    "test:web": "pnpm --filter web test",
+    "test:api": "pytest apps/api",
+    "storybook": "pnpm --filter ui storybook",
+    "build-storybook": "pnpm --filter ui build-storybook"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}

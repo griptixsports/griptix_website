@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  db:
+    image: ankane/pgvector:v0.5.1
+    container_name: griptix-db
+    environment:
+      POSTGRES_USER: griptix_user
+      POSTGRES_PASSWORD: CHANGE_ME
+      POSTGRES_DB: neondb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U griptix_user -d neondb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: griptix-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    container_name: griptix-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://griptix_user:CHANGE_ME@db:5432/neondb
+      - REDIS_URL=redis://redis:6379
+      - ENVIRONMENT=development
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: griptix-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:
+  redis_data:

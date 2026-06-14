@@ -1,0 +1,6 @@
+{
+  "id": "backend_build",
+  "name": "Backend Build Workflow",
+  "file_path": ".agent/workflows/backend_build.md",
+  "description": "Sequence of operations for linting, type-checking, database setup, and running backend tests."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "decisions",
+  "name": "Architectural Decisions Log",
+  "file_path": ".agent/memory/decisions.json",
+  "description": "Log of design tradeoffs, chosen database solutions, hosting platforms, and auth."
+}

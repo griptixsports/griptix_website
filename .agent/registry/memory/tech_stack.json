@@ -1,0 +1,6 @@
+{
+  "id": "tech_stack",
+  "name": "Technology Stack",
+  "file_path": ".agent/memory/tech_stack.json",
+  "description": "Defines pinned framework and platform versions across all layers of the monorepo."
+}

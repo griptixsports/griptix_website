@@ -1,0 +1,57 @@
+{
+  "product_vision": {
+    "name": "Griptix",
+    "description": "Custom-crafted, Olympic-grade ergonomic grips for competitive sport shooting firearms (10m, 25m, 50m pistols/rifles).",
+    "usp": "Olympic-grade grips engineered from 5-year-aged climate-resistant walnut and carbon composites, offering perfect barrel axis alignment and guaranteed ISSF compliance.",
+    "core_pillars": [
+      {
+        "title": "Ergonomic Fit",
+        "description": "Anatomically modeled to reduce wrist strain and maximize shot stability."
+      },
+      {
+        "title": "Premium Materials",
+        "description": "5-year-aged walnut and carbon fiber composite structures preventing warp."
+      },
+      {
+        "title": "ISSF Compliant",
+        "description": "Guaranteed dimensional compliance matching international regulation boxes."
+      }
+    ]
+  },
+  "business_goals": {
+    "primary": "Digital flagship presence and e-commerce customization of grips globally.",
+    "conversion_funnels": {
+      "d2c": "Homepage -> Discipline Selection -> PDP configuration -> Sizing Wizard -> Add to Cart -> Checkout",
+      "b2b": "Homepage -> Partner Program Landing -> Application Submit -> CRM Lead Follow-up"
+    }
+  },
+  "sitemap": {
+    "public_pages": {
+      "homepage": "/",
+      "our_story": "/story",
+      "contact_us": "/contact",
+      "partner_program_landing": "/partner-program"
+    },
+    "e_commerce": {
+      "catalog_hub": "/collections",
+      "discipline_category": "/collections/[discipline]",
+      "product_detail_page": "/products/[slug]",
+      "sizing_wizard": "/support/size-guide",
+      "checkout_cart": "/checkout/cart",
+      "checkout_stepper": "/checkout",
+      "order_confirmation": "/checkout/confirmation/[order_id]"
+    },
+    "private_routes": {
+      "customer_dashboard": "/account/dashboard",
+      "partner_dashboard": "/account/partner",
+      "admin_panel": "/admin"
+    }
+  },
+  "weapon_disciplines": [
+    "10m Air Pistol",
+    "25m Pistol",
+    "50m Pistol",
+    "10m Air Rifle",
+    "50m Rifle"
+  ]
+}

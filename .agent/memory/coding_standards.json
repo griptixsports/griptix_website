@@ -1,0 +1,69 @@
+{
+  "typescript": {
+    "strict": true,
+    "no_any": true,
+    "no_implicit_returns": true,
+    "no_unused_locals": true,
+    "import_style": "absolute paths via tsconfig paths (@/components, @/lib, @/features)",
+    "component_conventions": {
+      "file_naming": "PascalCase.tsx",
+      "props_interface": "ComponentNameProps — exported above the component",
+      "default_export": "always — no named-only exports for React components",
+      "server_components": "default — add 'use client' only when hooks/browser APIs are needed"
+    },
+    "banned_patterns": [
+      "any cast without // eslint-disable comment and justification",
+      "useEffect for data fetching (use Server Components or TanStack Query)",
+      "inline styles (use CSS Modules or Tailwind)",
+      "hardcoded API URLs (use env vars)"
+    ]
+  },
+  "python": {
+    "mypy": "strict",
+    "ruff_rules": ["E", "F", "I", "N", "B"],
+    "line_length": 88,
+    "docstring_style": "Google",
+    "type_annotations": "required on all public functions",
+    "async_convention": "all I/O-bound functions must be async",
+    "pydantic_version": "v2 — use model_validator, field_validator (not @validator)",
+    "sqlalchemy_version": "2.0 — use select() + execute() not query()",
+    "banned_patterns": [
+      "bare except (always catch specific exceptions)",
+      "print() for logging (use structlog or stdlib logging)",
+      "hardcoded secrets or DB credentials",
+      "synchronous DB calls inside async routes"
+    ]
+  },
+  "testing": {
+    "coverage_threshold": 80,
+    "unit_test_colocation": true,
+    "frontend_test_file_pattern": "*.test.tsx beside the component",
+    "backend_test_file_pattern": "tests/test_*.py",
+    "required_test_types": {
+      "frontend": ["unit (React Testing Library)", "e2e (Playwright for critical flows)"],
+      "backend": ["unit (pytest)", "integration (httpx async client against test DB)"]
+    },
+    "mocking_strategy": "dependency injection preferred over monkeypatching"
+  },
+  "git": {
+    "branch_naming": "type/short-description (e.g. feat/product-listing, fix/checkout-webhook)",
+    "commit_convention": "Conventional Commits (feat, fix, chore, refactor, test, docs)",
+    "pr_requirements": ["passing CI", "at least 1 reviewer approval", "no merge conflicts"],
+    "protected_branches": ["main"]
+  },
+  "api_design": {
+    "versioning": "/api/v1/ prefix on all routes",
+    "response_envelope": "{ data, meta?, error? }",
+    "error_format": "{ detail: string, code: string, field?: string }",
+    "auth": "Bearer JWT in Authorization header",
+    "pagination": "cursor-based for lists (next_cursor, prev_cursor, limit)",
+    "http_methods": "GET read, POST create, PATCH partial update, PUT full replace, DELETE"
+  },
+  "security": {
+    "sql": "parameterized queries only (no f-string SQL)",
+    "file_uploads": "MIME type whitelist enforced server-side (not Content-Type header)",
+    "auth_headers": "Bearer token only — no query-param auth",
+    "cors": "explicit allow-list from ALLOWED_ORIGINS env var",
+    "rate_limiting": "Redis-backed per-IP sliding window on all public endpoints"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "roles": {
+    "guest": {
+      "description": "Unauthenticated public visitors browsing the website.",
+      "permissions": [
+        "Read-only access to public brand and shop catalog pages.",
+        "Submit guest Sizing Wizard inputs (cached in local session state).",
+        "Perform checkout and order payment using Guest details."
+      ]
+    },
+    "athlete": {
+      "description": "Authenticated individual competitive shooters.",
+      "permissions": [
+        "Read-only access to public brand and shop catalog pages.",
+        "Full CRUD access to own anatomical profiles and scan files.",
+        "Read access to own order history and live WebSocket progress.",
+        "Perform checkout, save shipping addresses, and trigger quick reorders."
+      ]
+    },
+    "partner": {
+      "description": "Verified institutional coaching academy or shooting club buyer.",
+      "permissions": [
+        "All Athlete role permissions.",
+        "Read bulk-order team trackers and configure aggregate item sizes.",
+        "Verify partner discount allocations in pricing scripts.",
+        "Submit custom institutional quote requests."
+      ]
+    },
+    "admin": {
+      "description": "Internal staff, custom grip builders, and system engineers.",
+      "permissions": [
+        "Full read/write access to the Order Verification Board (status transitions).",
+        "Full CRUD access to catalog products and inventory counts.",
+        "Read/Write access to B2B Partner Application reviews (verify/reject).",
+        "Read-only access to the Audit Log database ledger.",
+        "Access basic system analytics cards."
+      ]
+    }
+  },
+  "security_requirements": {
+    "auth_tokens": "JWT HS256 access tokens (15m expiry) + HTTP-only cookies refresh tokens (7d expiry).",
+    "two_factor_auth": "TOTP 2FA required for Admin console access.",
+    "bola_protection": "Strict route validation: `user_id` inside JWT must match resource target `user_id` (block access if mismatch).",
+    "file_security": "MIME-type check to restrict FileUploadZone to images (JPEG, PNG, PDF scans), rejecting binaries or executables."
+  }
+}
