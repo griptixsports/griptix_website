@@ -1,7 +1,7 @@
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **Griptix_website** (129 symbols, 115 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **griptix_website** (171 symbols, 169 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > Index stale? Run `node .gitnexus/run.cjs analyze` from the project root — it auto-selects an available runner. No `.gitnexus/run.cjs` yet? `npx gitnexus analyze` (npm 11 crash → `npm i -g gitnexus`; #1939).
 
@@ -24,10 +24,10 @@ This project is indexed by GitNexus as **Griptix_website** (129 symbols, 115 rel
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/Griptix_website/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/Griptix_website/clusters` | All functional areas |
-| `gitnexus://repo/Griptix_website/processes` | All execution flows |
-| `gitnexus://repo/Griptix_website/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/griptix_website/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/griptix_website/clusters` | All functional areas |
+| `gitnexus://repo/griptix_website/processes` | All execution flows |
+| `gitnexus://repo/griptix_website/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

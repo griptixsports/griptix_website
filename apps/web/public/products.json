@@ -1,0 +1,352 @@
+[
+  {
+    "id": "grip-001",
+    "title": "Anatomical Match Pistol Grip",
+    "sku": "GTX-APG-M1",
+    "description": "Olympic-grade custom 3D printed grip for target pistols.",
+    "price": 189.99,
+    "image_url": "/images/pistol-grip-1.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-002",
+    "title": "Pro-Form Biometric Pistol Grip",
+    "sku": "GTX-PBG-V1",
+    "description": "Custom molded biometric grip featuring anti-slip micro-textures.",
+    "price": 195,
+    "image_url": "/images/products/pistol-2.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-003",
+    "title": "Titanium Core Competition Grip",
+    "sku": "GTX-TCG-T1",
+    "description": "Grade 5 titanium reinforced core wrapped in high-friction elastomer.",
+    "price": 299.99,
+    "image_url": "/images/products/pistol-3.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-004",
+    "title": "Chrono-Match Pistol Grip Left",
+    "sku": "GTX-CMP-L2",
+    "description": "Specially balanced left-handed anatomical grip for rapid-fire events.",
+    "price": 189.99,
+    "image_url": "/images/products/pistol-4.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-005",
+    "title": "Zenith Match Pistol Grip XL",
+    "sku": "GTX-ZMP-XL",
+    "description": "Oversized anatomical grip designed for large profile competition setups.",
+    "price": 195,
+    "image_url": "/images/products/pistol-5.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-006",
+    "title": "Omega Adjustable Sport Pistol Grip",
+    "sku": "GTX-OAS-P8",
+    "description": "Features adjustable palm rest shelf with secure locking hex screws.",
+    "price": 215,
+    "image_url": "/images/products/pistol-6.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-007",
+    "title": "Eclipse Match Pistol Grip S",
+    "sku": "GTX-EMP-S1",
+    "description": "Small profile scaled variant of our signature Olympic line-up.",
+    "price": 189.99,
+    "image_url": "/images/products/pistol-7.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-008",
+    "title": "Krypton Ergonomic Pistol Frame",
+    "sku": "GTX-KEP-K1",
+    "description": "Full-wrap customizable composite framework with high palm swell profile.",
+    "price": 175,
+    "image_url": "/images/products/pistol-8.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-009",
+    "title": "Pinnacle Silhouette Pistol Grip",
+    "sku": "GTX-PSP-G1",
+    "description": "Flared bottom profile engineered specifically for silhouette shooting disciplines.",
+    "price": 199.99,
+    "image_url": "/images/products/pistol-9.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-010",
+    "title": "Nexus Competition Pistol Housing",
+    "sku": "GTX-NCP-H4",
+    "description": "Aggressive diamond knurled texture variant for ultimate wet weather friction.",
+    "price": 190,
+    "image_url": "/images/products/pistol-10.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-011",
+    "title": "Titan Elite Biometric Grip Pro",
+    "sku": "GTX-TEB-P5",
+    "description": "Premium variant with memory foam inserts adapting instantly to grip signatures.",
+    "price": 349.99,
+    "image_url": "/images/products/pistol-11.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-012",
+    "title": "Alpha Thermal Pistol Sleeve",
+    "sku": "GTX-ATP-S1",
+    "description": "Insulated custom wrap to protect hand profiles against freezing ambient air.",
+    "price": 0,
+    "image_url": "/images/products/pistol-soon-1.jpg",
+    "category": "Pistol",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-013",
+    "title": "Apex Thumb Rest Wing Grip",
+    "sku": "GTX-ATR-W4",
+    "description": "Integrated wide-profile thumb rest for advanced rapid-fire stabilization control.",
+    "price": 49.99,
+    "image_url": "/images/products/pistol-2.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-014",
+    "title": "Prime Custom Palm Shelf Pistol Grip",
+    "sku": "GTX-PCP-S1",
+    "description": "Features a multi-axis adjustable wooden platform base integrated directly into the housing.",
+    "price": 245,
+    "image_url": "/images/products/pistol-3.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-015",
+    "title": "Carbon-Fiber Overwrap Pistol Grip",
+    "sku": "GTX-CFO-W1",
+    "description": "Ultra-lightweight structural overlay skin maximizing multi-directional hand friction.",
+    "price": 85,
+    "image_url": "/images/products/pistol-4.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-016",
+    "title": "RapidFire Olympic Counterweight Grip",
+    "sku": "GTX-ROC-C4",
+    "description": "Specially balanced internal cavity framework meant for dynamic muzzle-flip reduction.",
+    "price": 210,
+    "image_url": "/images/products/pistol-5.jpg",
+    "category": "Pistol",
+    "status": "available"
+  },
+  {
+    "id": "grip-017",
+    "title": "Precision Linear Adjustable Pistol Grip",
+    "sku": "GTX-PLA-A9",
+    "description": "Prototype variable rake angle chassis system modifying hand posture dynamically.",
+    "price": 0,
+    "image_url": "/images/products/pistol-soon-1.jpg",
+    "category": "Pistol",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-018",
+    "title": "Electronic Sensor-Embedded Training Grip",
+    "sku": "GTX-ESE-T2",
+    "description": "Smart grip concept recording pressure points during dry-fire match sequences.",
+    "price": 0,
+    "image_url": "/images/products/pistol-soon-1.jpg",
+    "category": "Pistol",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-019",
+    "title": "Carbon Rifle Stock Matrix",
+    "sku": "GTX-RFS-X1",
+    "description": "Next-gen ultralight structural rifle grip matrix.",
+    "price": 0,
+    "image_url": "/images/rifle-grip-soon.jpg",
+    "category": "Rifle",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-020",
+    "title": "Apex Carbon Fiber Rifle Grip",
+    "sku": "GTX-CRG-A1",
+    "description": "Ultra-stiff lightweight aerospace carbon composite grip.",
+    "price": 210.5,
+    "image_url": "/images/products/rifle-1.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-021",
+    "title": "Specter Minimalist Rifle Grip",
+    "sku": "GTX-SMR-S9",
+    "description": "Low profile vertical rifle grip optimized for precision platform configurations.",
+    "price": 65,
+    "image_url": "/images/products/rifle-2.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-022",
+    "title": "Matrix Gen-2 Custom Rifle Interface",
+    "sku": "GTX-M2R-02",
+    "description": "Next generation configurable rifle chassis grip with interchangeable panels.",
+    "price": 225,
+    "image_url": "/images/products/rifle-3.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-023",
+    "title": "Stratos Lightweight Carbon Grip",
+    "sku": "GTX-SLC-01",
+    "description": "Ultralight carbon monocoque design for specific high-altitude dynamic events.",
+    "price": 240,
+    "image_url": "/images/products/rifle-4.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-024",
+    "title": "Vortex Precision Sniper Grip",
+    "sku": "GTX-VPS-G9",
+    "description": "Adjustable rake angle modular grip assembly built for elite shooters.",
+    "price": 260,
+    "image_url": "/images/products/rifle-5.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-025",
+    "title": "Horizon Benchrest Rifle Block",
+    "sku": "GTX-HBR-B1",
+    "description": "Wide flat-bottom rifle stabilizer intended for static target support.",
+    "price": 145,
+    "image_url": "/images/products/rifle-6.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-026",
+    "title": "AeroMax Precision Rifle Chassis",
+    "sku": "GTX-ARC-X5",
+    "description": "Fully modular precision aluminum rifle chassis with modular grip panels.",
+    "price": 0,
+    "image_url": "/images/products/rifle-soon-1.jpg",
+    "category": "Rifle",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-027",
+    "title": "Fusion Hybrid Rifle Platform",
+    "sku": "GTX-FHR-H2",
+    "description": "Wood-polymer composite grip offering traditional aesthetics with modern stability.",
+    "price": 0,
+    "image_url": "/images/products/rifle-soon-2.jpg",
+    "category": "Rifle",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-028",
+    "title": "Interstellar Dynamic Rifle Stock",
+    "sku": "GTX-IDR-X2",
+    "description": "Concept adaptive chassis using scanning tech for customized fit.",
+    "price": 0,
+    "image_url": "/images/products/rifle-soon-3.jpg",
+    "category": "Rifle",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-029",
+    "title": "Vanguard Ergo Vertical Rifle Grip",
+    "sku": "GTX-VEF-05",
+    "description": "Ergonomic rifle stabilization front grip for dynamic target acquisition.",
+    "price": 55,
+    "image_url": "/images/products/rifle-1.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-030",
+    "title": "Quantum Adjustable Rifle Cheek Interface",
+    "sku": "GTX-QCR-Q1",
+    "description": "Micro-adjustable cheek stabilization pad compatible with modular matrix chassis.",
+    "price": 115,
+    "image_url": "/images/products/rifle-2.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-031",
+    "title": "Vector Barricade Support Rifle Stock",
+    "sku": "GTX-VBS-V3",
+    "description": "Heavy duty hand-stop and tactical barricade stabilizer unit for long-range platforms.",
+    "price": 79.99,
+    "image_url": "/images/products/rifle-3.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-032",
+    "title": "Stealth Modular Foregrip Handle",
+    "sku": "GTX-SVF-S1",
+    "description": "Compact injection-molded 90 degree forward structural rifle support handle.",
+    "price": 45,
+    "image_url": "/images/products/rifle-4.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-033",
+    "title": "Nova Segmented Rifle Panel System",
+    "sku": "GTX-NMR-P3",
+    "description": "Replacement high-friction scaling elements for custom physical stock upgrades.",
+    "price": 65,
+    "image_url": "/images/products/rifle-5.jpg",
+    "category": "Rifle",
+    "status": "available"
+  },
+  {
+    "id": "grip-034",
+    "title": "Cyclone Ventilated Structural Rifle Core",
+    "sku": "GTX-CVF-C2",
+    "description": "Hollow skeletal rifle middle mount engineered for rapid heat dissipation.",
+    "price": 0,
+    "image_url": "/images/products/rifle-soon-2.jpg",
+    "category": "Rifle",
+    "status": "coming_soon"
+  },
+  {
+    "id": "grip-035",
+    "title": "Overlord Integrated Guard Rifle Chassis",
+    "sku": "GTX-OMG-T1",
+    "description": "Integrated structural trigger guard and deep-grip hand stop architecture.",
+    "price": 0,
+    "image_url": "/images/products/rifle-soon-3.jpg",
+    "category": "Rifle",
+    "status": "coming_soon"
+  }
+]
