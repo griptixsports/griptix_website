@@ -1,0 +1,6 @@
+# Layout components — each file handles ONE layout concern (SOLID: S)
+# Examples of what goes here:
+#   TopNav.tsx      — site-wide navigation bar
+#   Footer.tsx      — site-wide footer
+#   Sidebar.tsx     — sidebar used in account/dashboard pages
+#   PageWrapper.tsx — standard page max-width + padding wrapper

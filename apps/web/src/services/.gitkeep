@@ -1,0 +1,7 @@
+# API service layer — abstracts all HTTP calls from components (SOLID: D)
+# One file per resource. Components import services, never fetch() directly.
+# Examples:
+#   products.ts  — getProducts(), getProductById(), getProductsByCategory()
+#   orders.ts    — createOrder(), getOrderById(), listUserOrders()
+#   auth.ts      — login(), register(), logout(), getSession()
+#   user.ts      — getUserProfile(), updateProfile()

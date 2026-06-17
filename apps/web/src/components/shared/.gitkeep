@@ -1,0 +1,5 @@
+# Shared components — one-off components reused across multiple route groups
+# Examples:
+#   SectionHeading.tsx   — reusable section title block
+#   EmptyState.tsx       — "nothing here yet" placeholder
+#   ErrorBoundary.tsx    — catches render errors gracefully

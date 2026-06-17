@@ -1,0 +1,6 @@
+# App-specific TypeScript types (SOLID: I — small, focused interfaces)
+# Shared/API types live in packages/types. Only put web-app-specific types here.
+# Examples:
+#   ui.ts        — NavItem, BreadcrumbItem, ToastMessage
+#   forms.ts     — CheckoutFormValues, SizingWizardStep
+#   filters.ts   — ProductFilterState, SortOption

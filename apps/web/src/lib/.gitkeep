@@ -1,0 +1,5 @@
+# Pure utility functions — no side effects, no API calls, no state (SOLID: S)
+# Examples:
+#   format.ts    — formatPrice(), formatDate(), formatWeight()
+#   cn.ts        — clsx + tailwind-merge helper for className merging
+#   validators.ts — pure input validation functions

@@ -1,0 +1,6 @@
+# Custom React hooks — each file exports ONE hook with ONE responsibility (SOLID: S)
+# Examples:
+#   useCart.ts           — cart item state + add/remove/clear actions
+#   useScrollPosition.ts — tracks scroll Y for nav transparency effect
+#   useMediaQuery.ts     — responsive breakpoint detection
+#   useLocalStorage.ts   — synced localStorage read/write

@@ -1,0 +1,97 @@
+/* Full-screen overlay — uses design token background */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  transition: opacity 0.75s ease-in-out, background-color 0.35s ease;
+  opacity: 1;
+}
+
+.overlayExit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Centered content column */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+/* Wordmark row — holds text + blinking cursor inline */
+.wordmarkRow {
+  display: flex;
+  align-items: flex-end;
+  min-height: 1.15em; /* prevents layout jump before first letter */
+}
+
+/* GRIPTIX — large, tracked */
+.wordmark {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: clamp(4rem, 8.5vw, 7rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+/* Blinking I-beam cursor shown while letters are typing */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.75em;
+  background-color: var(--accent-primary);
+  border-radius: 1px;
+  margin-left: 6px;
+  margin-bottom: 0.08em;
+  animation: blink 0.72s step-end infinite;
+  vertical-align: bottom;
+}
+
+/* Progress section */
+.indicators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.indicatorsExit {
+  opacity: 0;
+}
+
+.percentage {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thin progress bar — matches reference underline style */
+.track {
+  width: 72px;
+  height: 1px;
+  background-color: var(--border-color);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: var(--accent-primary);
+  transition: width 0.12s ease-out;
+}

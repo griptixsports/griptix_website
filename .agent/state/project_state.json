@@ -1,45 +1,45 @@
 {
   "project": "Griptix",
   "version": "1.0.0",
-  "last_updated": "2026-06-13",
-  "current_cycle": 0,
-  "current_stage": 1,
-  "completed_stages": [],
-  "completed_cycles": [],
-  "next_stage": 1,
-  "next_cycle": 0,
-  "status": "systemization_complete",
+  "last_updated": "2026-06-17",
+  "current_cycle": 1,
+  "current_stage": 2,
+  "completed_stages": ["stage_1"],
+  "completed_cycles": ["cycle_0"],
+  "next_stage": 2,
+  "next_cycle": 1,
+  "status": "stage_1_complete",
   "cycles": {
     "cycle_0": {
       "name": "Foundation",
       "description": "Monorepo scaffold, Docker Compose, CI/CD pipelines, design tokens, and database schema design.",
-      "status": "in_progress",
+      "status": "complete",
+      "completed_on": "2026-06-17",
       "agents": {
-        "INFRA": "pending",
-        "SCHEMA": "pending",
-        "UI_tokens": "pending"
+        "INFRA": "complete",
+        "SCHEMA": "complete",
+        "UI_tokens": "complete"
       },
-      "blocking_requirements": [
-        "GitHub organization and repository creation access",
-        "Railway account created and linked to GitHub repository",
-        "Domain griptix.in DNS management access",
-        "Vercel account linked to GitHub organization",
-        "Cloudflare account for R2 and DNS",
-        "Neon Serverless PostgreSQL project created"
+      "notes": [
+        "Switched from Railway to Render for backend hosting — documented in ADR-003.",
+        "setup.sh bootstrap script was not created (low priority, Docker Compose covers local dev).",
+        "ruff, mypy, ESLint all passing after CI/CD fixes on 2026-06-17.",
+        "Render deploy API fixed: clearCache uses string enum 'do_not_clear', not boolean.",
+        "mypy: added pydantic.mypy plugin and SQLModel model overrides for call-arg/misc errors.",
+        "database.py: engine now lazy-initialized to prevent import-time crash in CI."
       ]
     },
     "cycle_1": {
       "name": "Public Storefront MVP",
       "description": "Full UI kit, backend catalog API, authenticated sizing wizard, and beta deployment.",
-      "status": "blocked",
+      "status": "in_progress",
       "agents": {
-        "UI": "blocked",
-        "BACKEND": "blocked",
-        "FRONTEND": "blocked",
+        "UI": "available",
+        "BACKEND": "available",
+        "FRONTEND": "available",
         "QA": "blocked"
       },
       "blocking_requirements": [
-        "Cycle 0 complete",
         "Logo SVG (light + dark variants) delivered",
         "Typography locked (Inter confirmed)",
         "Product photography — min 3 images per product",
@@ -62,8 +62,8 @@
       },
       "blocking_requirements": [
         "Cycle 1 complete with beta athlete feedback addressed",
-        "Stripe test-mode keys available in Doppler",
-        "Razorpay test-mode keys available in Doppler",
+        "Stripe test-mode keys available",
+        "Razorpay test-mode keys available",
         "Brevo sender domain mail.griptix.in verified",
         "WhatsApp Business API token (or feature flagged off)"
       ]
@@ -87,14 +87,6 @@
     }
   },
   "missing_requirements": {
-    "critical_for_cycle_0": [
-      "Logo SVG (light + dark variants) — export from existing brand",
-      "Typography confirmed (Inter recommended — already in build plan)",
-      "Exact gold color measurement from griptix.in or confirm #D4AF37",
-      "GitHub org/repo creation",
-      "Domain DNS access for griptix.in",
-      "Vercel account linked to GitHub"
-    ],
     "required_before_cycle_1": [
       "Product photography — min 3 per product",
       "Hero video (WebM + MP4, < 8MB, silent loop)",

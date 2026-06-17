@@ -1,1 +1,113 @@
-[]
+[
+  {
+    "id": "STAGE1-001",
+    "name": "Docker Compose Configuration",
+    "description": "Create docker-compose.yml and docker-compose.override.yml for web, api, db, and redis services.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-13",
+    "artifacts": ["docker-compose.yml", "docker-compose.override.yml"]
+  },
+  {
+    "id": "STAGE1-002",
+    "name": "Linter & Prettier Configuration",
+    "description": "Create ESLint and Prettier configuration files at root and within workspaces.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-17",
+    "artifacts": ["pyproject.toml", "eslint.config.mjs"],
+    "notes": "ruff (E,F,I,N,B), mypy strict + pydantic.mypy plugin, ESLint flat config. All pass with zero errors after 2026-06-17 fixes."
+  },
+  {
+    "id": "STAGE1-003",
+    "name": "CI/CD Workflows",
+    "description": "Create GitHub Actions pipelines for linting, testing, and deploying frontend and backend services.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-17",
+    "artifacts": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/deploy-api.yml",
+      ".github/workflows/deploy-web.yml",
+      ".github/workflows/security.yml"
+    ],
+    "notes": "All 4 workflows live and passing. Fixed: lazy DB engine init, ruff line-length violations, mypy pydantic plugin, Render deploy JSON payload format."
+  },
+  {
+    "id": "STAGE1-004",
+    "name": "Render App Configuration",
+    "description": "Create Render blueprint config for API service deployment. (Originally scoped for Railway — switched to Render per ADR-003.)",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-13",
+    "artifacts": ["render.yaml"],
+    "notes": "Project migrated from Railway to Render. ADR-003 documents the decision. GitHub secrets RENDER_SERVICE_ID and RENDER_TOKEN configured."
+  },
+  {
+    "id": "STAGE1-005",
+    "name": "Local Dev Bootstrap Script",
+    "description": "Create setup.sh script to bootstrap docker, databases, and dependencies.",
+    "agent": "INFRA",
+    "skill": "stage1_foundation",
+    "status": "skipped",
+    "completed_on": "2026-06-17",
+    "notes": "Deferred. Docker Compose fully covers local dev setup. setup.sh not created — low priority until cycle 1 onboards external contributors."
+  },
+  {
+    "id": "STAGE1-006",
+    "name": "Next.js Workspace Setup",
+    "description": "Scaffold apps/web with layout, globals.css, and tsconfig.",
+    "agent": "FRONTEND",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-13",
+    "artifacts": [
+      "apps/web/src/app/layout.tsx",
+      "apps/web/src/app/globals.css",
+      "apps/web/src/app/page.tsx",
+      "apps/web/tsconfig.json"
+    ]
+  },
+  {
+    "id": "STAGE1-007",
+    "name": "FastAPI App Skeleton Setup",
+    "description": "Create apps/api/main.py, config, database, and requirements.txt.",
+    "agent": "BACKEND",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-13",
+    "artifacts": [
+      "apps/api/app/main.py",
+      "apps/api/core/config.py",
+      "apps/api/core/database.py",
+      "apps/api/requirements.txt"
+    ],
+    "notes": "database.py updated 2026-06-17: engine is now lazy-initialized to prevent import-time crash when DATABASE_URL is unset (e.g. in CI)."
+  },
+  {
+    "id": "STAGE1-008",
+    "name": "Database Schema Scaffolding",
+    "description": "Define database models, schemas, and configure Alembic migration environment.",
+    "agent": "SCHEMA",
+    "skill": "stage1_foundation",
+    "status": "complete",
+    "completed_on": "2026-06-13",
+    "artifacts": [
+      "apps/api/app/models/user.py",
+      "apps/api/app/models/product.py",
+      "apps/api/app/models/order.py",
+      "apps/api/app/models/audit_log.py",
+      "apps/api/app/models/anatomical_profile.py",
+      "apps/api/app/models/base.py",
+      "apps/api/app/schemas/user.py",
+      "apps/api/app/schemas/product.py",
+      "apps/api/app/schemas/order.py",
+      "apps/api/app/schemas/token.py",
+      "apps/api/app/schemas/common.py"
+    ]
+  }
+]

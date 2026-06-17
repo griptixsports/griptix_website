@@ -1,0 +1,3 @@
+# Route group: marketing pages (homepage, about, how-it-works, contact)
+# Pages here share a layout with TopNav + Footer.
+# Add layout.tsx here when the marketing layout is built.

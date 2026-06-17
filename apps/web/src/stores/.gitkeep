@@ -1,0 +1,5 @@
+# Client-side global state stores (SOLID: S — each store owns one domain)
+# Examples:
+#   cartStore.ts   — cart items, quantities, totals
+#   uiStore.ts     — drawer open/close, toast queue, modal state
+#   authStore.ts   — current user session on the client

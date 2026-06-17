@@ -1,0 +1,7 @@
+# Drop grip.glb here — this is the 3D model file loaded by the landing page preloader.
+#
+# Source: copy from apps/web2/public/3d/grip.glb  (or supply a new file)
+# Expected path at runtime: /3d/grip.glb
+#
+# If the file is missing the site still works — a 4-second timeout auto-advances
+# the preloader and shows the landing page without the 3D burst effect.
