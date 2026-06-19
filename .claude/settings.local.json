@@ -5,7 +5,11 @@
       "Bash(ruff check *)",
       "Bash(python3 -m pip install ruff mypy pydantic-settings --quiet)",
       "Bash(python3 -m ruff check apps/api)",
-      "Bash(python3 -m mypy apps/api --ignore-missing-imports)"
+      "Bash(python3 -m mypy apps/api --ignore-missing-imports)",
+      "Bash(npm run *)",
+      "Bash(pnpm install *)",
+      "Bash(/mnt/c/Users/mm96018/AppData/Roaming/npm/pnpm install *)",
+      "Bash(powershell.exe *)"
     ]
   }
 }

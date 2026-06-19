@@ -38,3 +38,23 @@ OTHER FIXES:
   env.example                 — replaced Railway section with Render credentials (Section 5)
   package-lock.json           — DELETED (stray npm lock file; project uses pnpm exclusively)
 
+
+--- 2026-06-17: 15-theme random-on-reload system ---
+Created: apps/web/src/app/themes.ts
+  - 15 themes exported: THEMES array, Theme type, getRandomTheme() helper
+Modified: apps/web/src/app/globals.css
+  - Replaced all hardcoded rgba(22,17,15,...) and rgba(212,184,149,...) values
+    with color-mix(in srgb, var(--color-dark-bg/sand) X%, transparent)
+  - Drawers, footer pill, vignette gradient, nav dots, watermark text all adapt automatically
+Modified: apps/web/src/app/page.tsx
+  - Imports getRandomTheme from themes.ts
+  - On mount: picks random theme, sets --color-sand, --color-dark-bg, --color-brown CSS vars
+  - toggleNightMode: swaps the two theme colors (accent <-> bg) instead of hardcoded pair
+  - Removed hardcoded stroke="#D4B895" / stroke="#52322B" from SVG paths — CSS inheritance now handles coloring
+  - Loader SVG fill uses style={{ fill: 'var(--color-sand)' }} instead of hardcoded #52322B
+Themes (accent / bg):
+  1  #21F1A8 / #171717    2  #FD1843 / #FFF9FA    3  #3C1A47 / #B6FF00
+  4  #004741 / #F0EDE4    5  #E4FD97 / #2D3E2C    6  #FFFDF1 / #59C749
+  7  #FFBE0B / #2A2312    8  #141414 / #2BEE34    9  #FF4103 / #001621
+ 10  #FFC6A8 / #741A2F   11  #FFEFB3 / #013E37   12  #EFE6DD / #9A0002
+ 13  #FBE311 / #261606   14  #321847 / #151530   15  #D3F00A / #F9100C

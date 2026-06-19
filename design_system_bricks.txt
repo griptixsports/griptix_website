@@ -1,0 +1,229 @@
+GRIPTIX — Design System Decision Tables
+========================================
+Fill every row before build starts.
+Status: [DONE] = decided  [OPEN] = still needed
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 1 — COLOR PALETTE                          [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Both light and dark mode defined.
+Dark mode activates automatically when the user's device is set to dark.
+
+-- LIGHT MODE (default) --
+
+Role                  | Token Name          | Value                      | Used For
+----------------------|---------------------|----------------------------|-----------------------------------------
+Main background       | --bg-main           | #FAF6F0                    | Overall page/layout background
+Surface (cards)       | --bg-surface        | #FFFFFF                    | Dashboard cards, panels, white surfaces
+Sidebar background    | --bg-sidebar        | #F5EFE6                    | Sidebar container
+Primary text          | --text-main         | #2C2520                    | High-contrast headings and body text
+Secondary text        | --text-muted        | #7A6F66                    | Labels, captions, secondary info
+Primary accent        | --accent-primary    | #C29B74                    | Primary CTAs, highlights, active states
+Secondary accent      | --accent-secondary  | #8E6F52                    | Secondary elements, hover states
+Glow / focus ring     | --accent-glow       | rgba(194, 155, 116, 0.20)  | Focus rings, hover glow effects
+Border / dividers     | --border-color      | #E6DFD5                    | Subtle divider lines between sections
+
+-- DARK MODE (activates via prefers-color-scheme: dark) --
+
+Role                  | Token Name          | Value                      | Used For
+----------------------|---------------------|----------------------------|-----------------------------------------
+Main background       | --bg-main           | #1A1613                    | Deepest dark warm-charcoal canvas
+Sidebar background    | --bg-sidebar        | #241F1A                    | Layer 1 — panels, slightly lighter
+Surface (cards)       | --bg-surface        | #2D2722                    | Layer 2 — cards "pop" above sidebar
+Primary text          | --text-main         | #FDFBF7                    | Crisp warm off-white for body/headers
+Secondary text        | --text-muted        | #A3968C                    | Soft taupe-gray for secondary elements
+Primary accent        | --accent-primary    | #D1B08C                    | Main action color (lifted for dark bg)
+Secondary accent      | --accent-secondary  | #A68565                    | Secondary accent (lifted for dark bg)
+Glow / focus ring     | --accent-glow       | rgba(209, 176, 140, 0.15)  | Focus rings, hover glow effects
+Border / dividers     | --border-color      | #3D342E                    | Dark muted divider lines
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 2 — TYPOGRAPHY                             [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Category      | Token Name        | Value                                    | Used For
+--------------|-------------------|------------------------------------------|--------------------------
+Font family   | --font-main       | 'Inter', system-ui, sans-serif           | All text across the site
+
+-- Font Weights --
+Weight        | Token Name        | Value   | Used For
+--------------|-------------------|---------|----------------------------------
+Regular       | --weight-regular  | 400     | Body text, descriptions
+Medium        | --weight-medium   | 500     | Labels, sub-headings
+Semibold      | --weight-semibold | 600     | Buttons, card titles, nav links
+Bold          | --weight-bold     | 700     | Page titles, metric numbers
+
+-- Font Sizes --
+Scale Name    | Token Name        | px size | Used For
+--------------|-------------------|---------|-----------------------------------------
+xs            | --size-xs         | 11px    | Chart axes, small meta tags
+sm            | --size-sm         | 13px    | Sidebar navigation, table data
+md            | --size-md         | 15px    | Standard body text, button text
+lg            | --size-lg         | 18px    | Card component titles
+xl            | --size-xl         | 20px    | Mid-level headers
+2xl           | --size-2xl        | 28px    | Dashboard / page titles
+3xl           | --size-3xl        | 36px    | Large metric numbers, hero stats
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 3 — SPACING SCALE                          [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+All values are multiples of 4px.
+
+Token Name   | Value  | Common Use
+-------------|--------|--------------------------------------------
+--space-1    | 4px    | Tiny gaps, icon padding
+--space-2    | 8px    | Inner padding for small tags/badges
+--space-3    | 12px   | Compact padding, list item spacing
+--space-4    | 16px   | Standard inner card padding
+--space-5    | 20px   | Section padding, form field gaps
+--space-6    | 24px   | Card gaps, large form padding
+--space-8    | 32px   | Section-to-section spacing
+--space-10   | 40px   | Large section padding
+--space-12   | 48px   | Hero section padding
+--space-16   | 64px   | Page-level vertical padding
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 4 — BORDER RADIUS SCALE                    [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Token Name     | Value    | Used For
+---------------|----------|-----------------------------------------
+--radius-none  | 0px      | Dividers, hard-edge elements
+--radius-sm    | 6px      | Status dots, small indicators
+--radius-md    | 10px     | Search inputs, filter dropdowns, pills
+--radius-lg    | 16px     | Main content cards, feature widgets
+--radius-pill  | 9999px   | Pill buttons, search bar, avatars
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 5 — SHADOW STYLES                          [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Token Name      | Value                                         | Used For
+----------------|-----------------------------------------------|-----------------------
+--shadow-soft   | 0 1px 3px rgba(44, 37, 32, 0.04)             | Subtle card lift
+--shadow-medium | 0 4px 20px -2px rgba(44, 37, 32, 0.06)       | Hovered cards, modals
+--shadow-glow   | 0 0 0 3px var(--accent-glow)                 | Focus ring on inputs
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 6 — RESPONSIVE BREAKPOINTS                 [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Name     | CSS Rule                      | When it applies
+---------|-------------------------------|-----------------------------
+Mobile   | max-width: 640px              | Phones
+Tablet   | min-width: 641px              | Tablets, large phones
+Desktop  | min-width: 1025px             | Laptops, standard monitors
+Wide     | min-width: 1441px             | Large / ultrawide monitors
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 7 — ANIMATION & MOTION                     [DONE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Decision              | Choice           | Value / Notes
+----------------------|------------------|--------------------------------------------
+Overall motion style  | Rich             | High-production feel; purposeful motion
+Hover transitions     | 200ms ease       | Applied to buttons, links, cards
+Page load animation   | Preloader + Burst| See PRELOADER SEQUENCE below
+Scroll animations     | TBD              | To be decided in future stage
+Button press feel     | Slight scale down| scale(0.97) on :active state
+
+-- PRELOADER SEQUENCE (Landing Page) --
+
+PHASE 1 — INITIALIZATION
+  - Preloader UI appears instantly on page load (no delay).
+  - Full-screen dark overlay (#1A1613) with subtle radial gradient texture.
+  - Centered inner container (#241F1A) with:
+      • GRIPTIX wordmark (all-caps, clean sans-serif, metallic sheen sweep animation)
+      • Tagline: "Precision in every Pull" (below wordmark, muted, letter-spaced)
+      • Percentage counter text (e.g. "64%") — centered below tagline
+      • Thin 1px horizontal progress bar — immediately below counter
+  - Behind the overlay, the browser begins fetching: /public/3d/grip.glb
+
+PHASE 2 — LOADING PROGRESS
+  - Progress bar scales from 0% → 100% width (left to right, smooth).
+  - Counter ticks upward (12%...45%...99%) in sync with bar.
+  - GRIPTIX logo runs a continuous metallic sheen sweep (CSS gradient wipe).
+  - GLB load is tracked via THREE.DefaultLoadingManager.
+  - Fallback: if GLB is missing or takes > 4 seconds, auto-advance to Phase 3.
+
+PHASE 3 — TRANSITION (THE REVEAL)
+  - Counter reaches 100%. Brief 400ms pause so user registers completion.
+  - Counter and progress bar fade to opacity 0.
+  - Inner container slides upward off-screen (translateY -100vh, 0.8s cubic-bezier).
+  - Overlay fades and is removed from the DOM.
+
+PHASE 4 — BURST (3D EXPLOSION)
+  - 10 cloned grip.glb instances burst outward from screen center.
+  - Each starts at (0,0,0) and animates to a unique radial target position.
+  - Timing: staggered per-instance delay (40ms apart) for organic feel.
+  - Easing: easeOutCubic for natural deceleration.
+  - Depth distribution across the Z-axis (z: 0 to -6):
+      • Close (z=0):  large scale (0.82), fully opaque (opacity 1.0)
+      • Far  (z=-6):  small scale (0.52), faded (opacity 0.35)
+
+PHASE 5 — FLOAT & SETTLE
+  - After burst, each grip enters a slow continuous float (sin wave, Y-axis).
+  - Each grip slowly rotates on all three axes at unique speeds.
+  - Float speed and phase are unique per instance (no synchronized bobbing).
+
+PHASE 6 — UI REVEAL
+  - As grips settle, the main GRIPTIX UI (TopNav + Hero + Stats) fades in.
+  - Fade-in duration: 600ms ease-in.
+  - The 3D canvas remains as the full-screen animated background.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 8 — LOGO & BRAND MARKS                     [PARTIAL]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Item                  | Status          | Notes
+----------------------|-----------------|----------------------------------------------
+Logo SVG (dark bg)    | OPEN            | To be created — text-based, dark bg variant
+Logo SVG (light bg)   | OPEN            | To be created — text-based, light bg variant
+Logo mark / icon      | OPEN            | Small square icon for favicon / app icon
+Brand name style      | DONE            | All-caps: GRIPTIX
+Font style            | DONE            | Clean sans-serif — straight lines, no serifs, modern and professional
+Tagline               | DONE            | Precision in every Pull
+
+-- LOGO DESIGN RULES --
+- Always render as: GRIPTIX (all caps, no exceptions)
+- Font: Clean sans-serif — no decorative flourishes, no serifs
+- Character: Strong, authoritative, confident — all caps projects stability
+- Do NOT use script, display, or decorative typefaces for the brand name
+- Minimum size: never render smaller than 16px height to preserve legibility
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE 9 — OVERALL DESIGN VIBE                    [PARTIAL]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Question                        | Answer
+--------------------------------|----------------------------------------------
+Mood                            | Premium tactical / artisanal sport
+Base mode                       | Both — light (default) + dark (auto via OS)
+Layout density                  | Balanced — breathing room, not sparse
+Visual weight of buttons        | Rounded pill (--radius-pill applied)
+Photography style (future)      | OPEN — dark dramatic or studio (TBD)
+Brands you admire the look of   | OPEN
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Table 1  Colors         [DONE]
+Table 2  Typography     [DONE]
+Table 3  Spacing        [DONE]
+Table 4  Border Radius  [DONE]
+Table 5  Shadows        [DONE]
+Table 6  Breakpoints    [DONE]
+Table 7  Animation      [DONE] — full 6-phase preloader + burst sequence documented
+Table 8  Logo           [PARTIAL] — brand name, font rules, tagline done; SVG files still open
+Table 9  Design Vibe    [PARTIAL] — mood, mode, density, buttons done; photography + brand refs open
