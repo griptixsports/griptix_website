@@ -1,17 +1,12 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import Preloader from "@/components/preloader/Preloader";
+import FrameAnimation from "@/components/scene/FrameAnimation";
 import { useTheme } from "@/hooks/useTheme";
 import styles from "./page.module.css";
 
-// Three.js canvas — client-only (no SSR)
-const GriptixScene = dynamic(
-  () => import("@/components/scene/GriptixScene"),
-  { ssr: false }
-);
-
 type Phase = "loading" | "complete" | "revealing" | "revealed";
+
 
 function SunIcon() {
   return (
@@ -43,7 +38,6 @@ export default function Home() {
   const advancedRef = useRef(false);
   const { theme, toggle } = useTheme();
 
-  // Advance through reveal phases once GLB is loaded
   const handleLoaded = useCallback(() => {
     if (advancedRef.current) return;
     advancedRef.current = true;
@@ -52,7 +46,7 @@ export default function Home() {
     setTimeout(() => setPhase("revealed"), 1500);
   }, []);
 
-  // Fallback: if GLB is missing or network is slow, auto-reveal after 4 s
+  // Fallback: auto-reveal after 4 s if frames are slow to load
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!advancedRef.current) handleLoaded();
@@ -60,20 +54,21 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [handleLoaded]);
 
-  const isBursting = phase === "revealing" || phase === "revealed";
   const isUIVisible = phase === "revealed";
   const bgColor = theme === "dark" ? "#1A1613" : "#FAF6F0";
 
   return (
     <div className={styles.page}>
 
-      {/* ── 3D Canvas (always mounted — loading starts immediately) ── */}
-      <GriptixScene
-        burst={isBursting}
+      {/* ── Frame animation background (always mounted — preloading starts immediately) ── */}
+      <FrameAnimation
         onProgress={setProgress}
         onLoaded={handleLoaded}
         bgColor={bgColor}
       />
+
+      {/* ── Black overlay above frames ── */}
+      <div className={styles.frameOverlay} />
 
       {/* ── Preloader (sits above canvas) ── */}
       {phase !== "revealed" && (

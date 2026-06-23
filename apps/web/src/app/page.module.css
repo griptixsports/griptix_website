@@ -7,6 +7,15 @@
   background-color: transparent; /* body in globals.css owns the background */
 }
 
+/* ── Black overlay above frame animation ── */
+.frameOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* ── UI overlay — sits above the 3D canvas ── */
 .ui {
   position: fixed;
